@@ -112,9 +112,45 @@ section.landing {
   list-style: none;
 }
 
-.navbar-item {
+.navbar-item, .navbar-facebook, .navbar-twitter, .navbar-instagram, .navbar-tiktok, .navbar-spotify, .navbar-apple, .navbar-youtube, .navbar-soundcloud, .navbar-bandcamp {
   color: rgba(255, 255, 255, 0.87);
   padding-left: 0.8rem;
+}
+
+.navbar-facebook:hover {
+  color: #4267b2;
+}
+
+.navbar-twitter:hover {
+  color: #1da1f2;
+}
+
+.navbar-instagram:hover {
+  color: #e1306c;
+}
+
+.navbar-tiktok:hover {
+  color: #ff0050;
+}
+
+.navbar-spotify:hover {
+  color: #1db954;
+}
+
+.navbar-apple:hover {
+  color: #fc3c44;
+}
+
+.navbar-youtube:hover {
+  color: #ff0000;
+}
+
+.navbar-soundcloud:hover {
+  color: #f26f23;
+}
+
+.navbar-bandcamp:hover {
+  color: #629aa9;
 }
 
 section.about {

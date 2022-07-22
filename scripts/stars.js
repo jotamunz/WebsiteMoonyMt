@@ -158,7 +158,7 @@ window.onmousemove = function (e) {
 };
 
 function drawIfMouseMoving() {
-    if (!mouseMoving) return;
+    if (!mouseMoving || mouseY < 65) return;
 
     if (dots.length == 0) {
         dots[0] = new Dot(0, mouseX, mouseY);
