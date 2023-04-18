@@ -149,7 +149,7 @@ function animate() {
 window.onmousemove = function (e) {
   mouseMoving = true;
   mouseX = e.clientX;
-  mouseY = e.clientY;
+  mouseY = e.clientY + window.pageYOffset;
   clearInterval(mouseMoveChecker);
   mouseMoveChecker = setTimeout(function () {
     mouseMoving = false;
@@ -157,7 +157,7 @@ window.onmousemove = function (e) {
 };
 
 function drawIfMouseMoving() {
-  if (!mouseMoving) return;
+  if (!mouseMoving || mouseY > HEIGHT) return;
 
   if (dots.length == 0) {
     dots[0] = new Dot(0, mouseX, mouseY);
