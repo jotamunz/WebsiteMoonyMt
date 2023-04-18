@@ -1,156 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Moony Mt. | Official Website</title>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>Moony Mt. | Official Website</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Meta tags -->
-        <meta name="description" content="The official site of Moony Mt." />
-        <meta name="keywords" content="Moony Mt." />
+    <!-- Meta tags -->
+    <meta name="description" content="The official site of Moony Mt." />
+    <meta name="keywords" content="Moony Mt." />
 
-        <!-- Open Graph Tags -->
-        <meta property="og:title" content="Moony Mt." />
-        <meta property="og:url" content="https://www.moonymt.com" />
-        <meta
-            property="og:image"
-            content="https://i1.sndcdn.com/avatars-000304921252-8fjrgb-t500x500.jpg"
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Moony Mt." />
+    <meta property="og:url" content="https://www.moonymt.com" />
+    <meta
+      property="og:image"
+      content="https://i1.sndcdn.com/avatars-000304921252-8fjrgb-t500x500.jpg"
+    />
+    <meta property="og:description" content="The official site of Moony Mt." />
+    <meta property="og:site_name" content="Moony Mt. | Official Website" />
+    <meta property="og:type" content="website" />
+
+    <!-- Icons -->
+    <link
+      rel="icon"
+      href="https://i1.sndcdn.com/avatars-000304921252-8fjrgb-t500x500.jpg"
+      type="image/jpg"
+    />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="section landing">
+      <div class="filter"></div>
+      <canvas id="canvas"></canvas>
+      <script src="./scripts/stars.js"></script>
+      <div class="landscape"></div>
+      <div class="title-container">
+        <h1 class="title">Moony Mt.</h1>
+        <a href="#" class="btn">LISTEN</a>
+      </div>
+    </section>
+    <section class="section about">
+      <div class="about-image-container">
+        <img
+          src="/img/Moony Mt. - About.jpg"
+          alt="About Moony Mt."
+          class="about-image"
         />
-        <meta
-            property="og:description"
-            content="The official site of Moony Mt."
-        />
-        <meta property="og:site_name" content="Moony Mt. | Official Website" />
-        <meta property="og:type" content="website" />
-
-        <!-- Icons -->
-        <link
-            rel="icon"
-            href="https://i1.sndcdn.com/avatars-000304921252-8fjrgb-t500x500.jpg"
-            type="image/jpg"
-        />
-
-        <!-- Style -->
-        <link rel="stylesheet" href="styles/styles.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        />
-    </head>
-
-    <body>
-        <section class="section landing">
-            <nav class="navbar">
-                <div class="navbar-container">
-                    <h2 class="navbar-logo">Moony Mt.</h2>
-                    <div class="navbar-toggle" id="mobile-menu">
-                        <span class="bar"></span> <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                    <ul class="navbar-menu">
-                        <li>
-                            <a
-                                href="https://www.facebook.com/MoonyDotMt"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-facebook"
-                                ><i class="fab fa-facebook fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://twitter.com/MoonyDotMt"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-twitter"
-                                ><i class="fab fa-twitter fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://www.instagram.com/moony.mt/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-instagram"
-                                ><i class="fab fa-instagram fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://www.tiktok.com/@moony.mt"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-tiktok"
-                                ><i class="fab fa-tiktok fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://open.spotify.com/artist/2eQisz6cdPonB0xDanfOM9?si=LtJZDLxmRmuo1qKyB3LMEA"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-spotify"
-                                ><i class="fab fa-spotify fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://music.apple.com/us/artist/moony-mt/1562018887"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-apple"
-                                ><i class="fab fa-apple fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://www.youtube.com/channel/UC20zoRMvPMM5IC93lVm1Nfg"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-youtube"
-                                ><i class="fab fa-youtube fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://soundcloud.com/moonymt"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-soundcloud"
-                                ><i class="fab fa-soundcloud fa-xl"></i
-                            ></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a
-                                href="https://moonymt.bandcamp.com/releases"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="navbar-bandcamp"
-                                ><i class="fab fa-bandcamp fa-xl"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="filter"></div>
-            <canvas id="canvas"></canvas>
-            <script src="./scripts/stars.js"></script>
-            <div class="landscape"></div>
-        </section>
-        <section class="section about">
-            <div>
-                <p>
-                    Jose Pablo Muñoz, known professionally as Moony Mt., is a
-                    Costa Rican record producer and songwriter. On September 2nd
-                    2021, he entered the world of lofi hip hop with his first
-                    single titled Jiufen. This first song relies heavily on
-                    Asian instruments and melodies, inspired by his travels
-                    through Taiwan and Japan. Nevertheless, Moony Mt. is ready
-                    to branch out into a wide range of lofi hip hop styles with
-                    his upcoming album.
-                </p>
-            </div>
-        </section>
-    </body>
+      </div>
+      <div class="about-text-container">
+        <h2 class="about-title">About Moony Mt.</h2>
+        <p class="about-text">
+          Jose Pablo Muñoz, known professionally as Moony Mt., is a Costa Rican
+          record producer and songwriter. On September 2nd 2021, he entered the
+          world of lofi hip hop with his first single titled Jiufen. This first
+          song relies heavily on Asian instruments and melodies, inspired by his
+          travels through Taiwan and Japan. Although his main focus is on
+          instrumental beats, he also explores a more pop-driven sound as part
+          of the duo TURQ.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a
+              href="https://www.facebook.com/MoonyDotMt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-facebook"
+              ><i class="fab fa-facebook fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/MoonyDotMt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-twitter"
+              ><i class="fab fa-twitter fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/moony.mt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-instagram"
+              ><i class="fab fa-instagram fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com/@moony.mt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-tiktok"
+              ><i class="fab fa-tiktok fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://open.spotify.com/artist/2eQisz6cdPonB0xDanfOM9?si=LtJZDLxmRmuo1qKyB3LMEA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-spotify"
+              ><i class="fab fa-spotify fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://music.apple.com/us/artist/moony-mt/1562018887"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-apple"
+              ><i class="fab fa-apple fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UC20zoRMvPMM5IC93lVm1Nfg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-youtube"
+              ><i class="fab fa-youtube fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://soundcloud.com/moonymt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-soundcloud"
+              ><i class="fab fa-soundcloud fa-xl"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://moonymt.bandcamp.com/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar-bandcamp"
+              ><i class="fab fa-bandcamp fa-xl"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
