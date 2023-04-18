@@ -18,7 +18,7 @@ h2 {
 }
 
 /* Wide screen */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 951px) {
   h1 {
     font-size: 6rem;
   }
@@ -44,9 +44,12 @@ h2 {
   .about-text {
     font-size: 1.25rem;
   }
+  .navbar-list {
+    max-width: 40rem;
+  }
 }
 /* Narrow screen */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   h1 {
     font-size: 3rem;
   }
@@ -70,6 +73,9 @@ h2 {
   }
   .about-text {
     font-size: 0.75rem;
+  }
+  .navbar-list {
+    max-width: 30rem;
   }
 }
 .btn {
@@ -188,7 +194,8 @@ section.about p {
 
 .navbar-list {
   height: 100%;
-  width: 80%;
+  width: 100%;
+  padding: 0 4rem;
   justify-content: space-between;
   align-items: center;
   display: flex;
