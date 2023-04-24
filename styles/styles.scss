@@ -33,14 +33,14 @@ h2 {
   padding: 0.5rem 2rem;
 }
 
-@mixin wide-container($right) {
-  @if $right {
+@mixin wide-container($left) {
+  @if $left {
     justify-content: right;
-    padding-right: 2rem;
+    padding-right: 3rem;
     padding-left: 4rem;
   } @else {
     justify-content: left;
-    padding-left: 2rem;
+    padding-left: 3rem;
     padding-right: 4rem;
   }
 }
@@ -65,10 +65,10 @@ h2 {
     flex-direction: row;
   }
   .about-image-container {
-    @include wide-container($right: true);
+    @include wide-container($left: true);
   }
   .about-text-container {
-    @include wide-container($right: false);
+    @include wide-container($left: false);
   }
   .about-text {
     font-size: 1.15rem;
@@ -77,11 +77,23 @@ h2 {
     flex-direction: row;
   }
   .playlists-halfpage-container {
-    @include wide-container($right: true);
+    @include wide-container($left: true);
     width: 50%;
   }
   .playlists-text-container {
     float: right;
+  }
+  section.embeds {
+    flex-direction: row;
+  }
+  .embeds-left-container {
+    @include wide-container($left: true);
+  }
+  .embeds-right-container {
+    @include wide-container($left: false);
+  }
+  .embed {
+    margin-top: 1vh;
   }
   .navbar-list {
     max-width: 40rem;
@@ -118,6 +130,16 @@ h2 {
   .playlists-halfpage-container {
     @include narrow-container;
     display: flex;
+  }
+  section.embeds {
+    flex-direction: column;
+  }
+  .embeds-left-container {
+    @include narrow-container;
+  }
+  .embeds-right-container {
+    @include narrow-container;
+    margin-top: 1rem;
   }
   .navbar-list {
     max-width: 30rem;
@@ -240,6 +262,7 @@ section.playlists {
 }
 
 .playlists-button {
+  display: flex;
   margin-top: 1rem;
 }
 
@@ -247,9 +270,26 @@ section.embeds {
   @include section;
 }
 
+.embeds-left-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.embeds-right-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.embed {
+  @include max-width-responsive();
+  height: 23rem;
+}
+
 .navbar {
   @include section;
-  padding-bottom: 2vh;
+  padding: 4vh 0;
   justify-content: center;
   align-items: center;
 }
@@ -257,7 +297,7 @@ section.embeds {
 .navbar-list {
   height: 100%;
   width: 100%;
-  padding: 0 4rem;
+  padding: 0 3rem;
   justify-content: space-between;
   align-items: center;
   display: flex;
