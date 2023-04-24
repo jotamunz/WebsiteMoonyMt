@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+$poppins: 'Poppins', sans-serif;
+$white: rgba(
+  $color: #ffffff,
+  $alpha: 0.87,
+);
+$black: #121212;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: $poppins;
+}
+
+h1 {
+  font-weight: bold;
+  color: $white;
+}
+
+h2 {
+  font-weight: bold;
+  color: $white;
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: medium;
+  background: $white;
+  color: $black;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin wide-container($left) {
+  @if $left {
+    justify-content: right;
+    padding-right: 3rem;
+    padding-left: 4rem;
+  } @else {
+    justify-content: left;
+    padding-left: 3rem;
+    padding-right: 4rem;
+  }
+}
+
+@mixin narrow-container() {
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+/* Wide screen */
+@media screen and (min-width: 950px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  .btn {
+    font-size: 1.5rem;
+  }
+  section.about {
+    flex-direction: row;
+  }
+  .about-image-container {
+    @include wide-container($left: true);
+  }
+  .about-text-container {
+    @include wide-container($left: false);
+  }
+  .about-text {
+    font-size: 1.15rem;
+  }
+  section.playlists {
+    flex-direction: row;
+  }
+  .playlists-halfpage-container {
+    @include wide-container($left: true);
+    width: 50%;
+  }
+  .playlists-text-container {
+    float: right;
+  }
+  section.embeds {
+    flex-direction: row;
+  }
+  .embeds-left-container {
+    @include wide-container($left: true);
+  }
+  .embeds-right-container {
+    @include wide-container($left: false);
+  }
+  .embed {
+    margin-top: 1vh;
+  }
+  .navbar-list {
+    max-width: 40rem;
+  }
+}
+
+/* Narrow screen */
+@media screen and (max-width: 950px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+  section.about {
+    flex-direction: column;
+  }
+  .about-image-container {
+    @include narrow-container;
+  }
+  .about-text-container {
+    @include narrow-container;
+    margin-top: 1rem;
+  }
+  .about-text {
+    font-size: 0.75rem;
+  }
+  section.playlists {
+    flex-direction: column;
+  }
+  .playlists-halfpage-container {
+    @include narrow-container;
+    display: flex;
+  }
+  section.embeds {
+    flex-direction: column;
+  }
+  .embeds-left-container {
+    @include narrow-container;
+  }
+  .embeds-right-container {
+    @include narrow-container;
+    margin-top: 1rem;
+  }
+  .navbar-list {
+    max-width: 30rem;
+  }
+}
+
+section.landing {
+  width: 100%;
+  height: 95vh;
+  overflow: hidden;
+  background: $black;
+  background: linear-gradient(to bottom, $black 0%, #5788fe 100%);
+}
+
+.filter {
+  width: 100%;
+  height: 95vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fe5757;
+  animation: colorChange 30s ease-in-out infinite;
+  animation-fill-mode: both;
+  mix-blend-mode: overlay;
+}
+
+@keyframes colorChange {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.landscape {
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/silhouette.png);
+  background-repeat: repeat-x;
+  background-position: center bottom;
+}
+
+.title-container {
+  display: flex;
+  width: 100%;
+  z-index: 99;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+@mixin max-width-responsive() {
+  max-width: 30rem;
+  width: 100%;
+  height: auto;
+}
+
+@mixin section() {
+  width: 100%;
+  height: 100%;
+  background: $black;
+  display: flex;
+  padding-top: 2vh;
+}
+
+section.about {
+  @include section;
+  justify-content: center;
+
+  p {
+    color: $white;
+    font-weight: medium;
+  }
+}
+
+.about-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image {
+  @include max-width-responsive;
+  border-radius: 8px;
+}
+
+.about-text {
+  @include max-width-responsive;
+  margin-top: 0.5rem;
+}
+
+.about-title {
+  @include max-width-responsive;
+}
+
+section.playlists {
+  @include section;
+}
+
+.playlists-text-container {
+  display: flex;
+  flex-direction: column;
+  @include max-width-responsive;
+}
+
+.playlists-button {
+  display: flex;
+  margin-top: 1rem;
+}
+
+section.embeds {
+  @include section;
+}
+
+.embeds-left-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.embeds-right-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.embed {
+  @include max-width-responsive();
+  height: 23rem;
+  border-radius: 12px;
+}
+
+.navbar {
+  @include section;
+  padding: 4vh 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-list {
+  height: 100%;
+  width: 100%;
+  padding: 0 3rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+.navbar-item {
+  color: $white;
+}
+
+.navbar-facebook {
+  @extend .navbar-item;
+  &:hover {
+    color: #4267b2;
+  }
+}
+
+.navbar-twitter {
+  @extend .navbar-item;
+  &:hover {
+    color: #1da1f2;
+  }
+}
+
+.navbar-instagram {
+  @extend .navbar-item;
+  &:hover {
+    color: #e1306c;
+  }
+}
+
+.navbar-tiktok {
+  @extend .navbar-item;
+  &:hover {
+    color: #ff0050;
+  }
+}
+
+.navbar-spotify {
+  @extend .navbar-item;
+  &:hover {
+    color: #1db954;
+  }
+}
+
+.navbar-apple {
+  @extend .navbar-item;
+  &:hover {
+    color: #fc3c44;
+  }
+}
+
+.navbar-youtube {
+  @extend .navbar-item;
+  &:hover {
+    color: #ff0000;
+  }
+}
+
+.navbar-soundcloud {
+  @extend .navbar-item;
+  &:hover {
+    color: #f26f23;
+  }
+}
+
+.navbar-bandcamp {
+  @extend .navbar-item;
+  &:hover {
+    color: #629aa9;
+  }
+}
